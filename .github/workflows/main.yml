@@ -1,6 +1,6 @@
-# This is a basic workflow to help you get started with Actions
+# # This is a basic workflow to help you get started with Actions
 
-name: Daily Check In
+# name: Daily Check In
 
 # Controls when the action will run. 
 on:
@@ -26,7 +26,7 @@ jobs:
         python -m pip install --upgrade requests
         # 安装需要的python库
     - name: '[Final Main] Check In'
-      run: |
-        python submit_3chk.py
-        python submit.py
+#       run: |
+#         python submit_3chk.py
+#         python submit.py
         # 执行代码
