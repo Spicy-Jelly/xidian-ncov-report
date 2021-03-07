@@ -5,8 +5,8 @@
 # Controls when the action will run. 
 on:
   schedule:
-    - cron: ' 0 0 * * *'
-    # UTC时间，分别对应了北京时间的8点、13点、19点的整点和30分
+    - cron: ' 0 0 8,13,20 * * ?'
+    # UTC时间
 jobs:
   sign_in:
     runs-on: ubuntu-latest
@@ -26,7 +26,7 @@ jobs:
         python -m pip install --upgrade requests
         # 安装需要的python库
     - name: '[Final Main] Check In'
-#       run: |
-#         python submit_3chk.py
+       run: |
+         python submit_3chk.py
 #         python submit.py
         # 执行代码
