@@ -5,7 +5,7 @@
 # Controls when the action will run. 
 on:
   schedule:
-    - cron: ' 0 0 8,13,20 * * '
+    - cron: '0 1,6,12 * * *'
     # UTC时间
 jobs:
   sign_in:
@@ -28,5 +28,5 @@ jobs:
     - name: '[Final Main] Check In'
       run: |
         python submit_3chk.py
-        python submit.py
+#       python submit.py
         # 执行代码
