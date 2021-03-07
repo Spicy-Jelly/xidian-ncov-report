@@ -5,7 +5,7 @@
 # Controls when the action will run. 
 on:
   schedule:
-    - cron: ' 0 0 8,13,20 * * ?'
+    - cron: ' 0 0 8,13,20 * * '
     # UTC时间
 jobs:
   sign_in:
@@ -26,7 +26,7 @@ jobs:
         python -m pip install --upgrade requests
         # 安装需要的python库
     - name: '[Final Main] Check In'
-       run: |
-         python submit_3chk.py
-#         python submit.py
+      run: |
+        python submit_3chk.py
+        python submit.py
         # 执行代码
